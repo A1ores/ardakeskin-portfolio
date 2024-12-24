@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.strip {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none; /* Firefox */
+}
+
+.strip::-webkit-scrollbar {
+    display: none; /* C-----------------------hrome, Safari, Opera */
+}
+
+.top-strip {
+    background-color: #1D2D50;
+}
+
+.bottom-strip {
+    background-color: #133B5C;
+}
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    background-color: #1E5F74;
+    color: #FCDAB7;
+    text-align: center;
+    line-height: 200px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}

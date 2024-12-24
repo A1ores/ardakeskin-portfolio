@@ -18,15 +18,15 @@ body {
 }
 
 .strip::-webkit-scrollbar {
-    display: none; /* C-----------------------hrome, Safari, Opera */
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .top-strip {
-    background-color: #1D2D50;
+    background-color: #1d2d50;
 }
 
 .bottom-strip {
-    background-color: #133B5C;
+    background-color: #133b5c;
 }
 
 .box {
@@ -34,8 +34,8 @@ body {
     width: 200px;
     height: 200px;
     margin: 0 10px;
-    background-color: #1E5F74;
-    color: #FCDAB7;
+    background-color: #1e5f74;
+    color: #fcdab7;
     text-align: center;
     line-height: 200px;
     font-size: 1.2rem;

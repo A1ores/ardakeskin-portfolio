@@ -1,24 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
 }
 
-.strip {
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    height: 250px;
-    align-items: center;
-    justify-content: center;
-    scrollbar-width: none; /* Firefox */
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.strip::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+.strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 30px;
 }
 
 .top-strip {
@@ -28,24 +27,107 @@ body {
 .bottom-strip {
     background-color: #133b5c;
 }
-.proje-strip {
-    background-color: #6b613a;
-}
+
 .box {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 200px;
-    height: 200px;
-    margin: 0 10px;
+    margin: 10px;
     background-color: #1e5f74;
     color: #fcdab7;
     text-align: center;
-    line-height: 200px;
+    padding: 20px;
     font-size: 1.2rem;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.top-strip .box:first-child {
+    width: calc(
+        200px * 3 + 20px
+    ); /* 2 divlik alan kaplaması için genişlik ayarı */
 }
 
 .box:hover {
     transform: scale(1.1);
+}
+.text-p {
+    color: #fcdab7;
+    text-align: justify;
+}
+.projeler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #ffdf6dd9;
+    width: 100%;
+}
+
+.projelerim-baslik {
+    font-size: 1.5rem;
+    color: #000000;
+    background-color: #e3c66e;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.proje-kutu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.project-kutu {
+    cursor: pointer;
+    transition: transform 0.3s;
+    min-height: 240px;
+    width: 27vw;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdf6dd9;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-align: center;
+    overflow: hidden;
+}
+
+.project-kutu:hover {
+    transform: scale(1.1); /* Kutuyu büyütür */
+}
+
+.project-kutu p {
+    word-wrap: break-word; /* Uzun kelimelerin taşmasını engeller */
+    overflow-wrap: break-word; /* Daha geniş tarayıcı desteği */
+    word-break: break-word; /* Uzun kelimelerin taşmasını önler */
+    white-space: normal; /* Metnin alt satıra geçmesini sağlar */
+    text-align: justify; /* İsteğe bağlı: Metni ortalar */
+    margin: 0; /* Varsayılan margin'i kaldırır */
+    padding: 10px;
+}
+
+.project-kutu img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }

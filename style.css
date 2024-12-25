@@ -28,7 +28,9 @@ body {
 .bottom-strip {
     background-color: #133b5c;
 }
-
+.proje-strip {
+    background-color: #6b613a;
+}
 .box {
     display: inline-block;
     width: 200px;

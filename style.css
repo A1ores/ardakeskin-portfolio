@@ -53,6 +53,19 @@ body {
         200px * 3 + 20px
     ); /* 2 divlik alan kaplaması için genişlik ayarı */
 }
+#box-info {
+    width: calc(200px + 45px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.box-info-alt-kutucuk {
+    min-height: 200px;
+    background-color: #236d85;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 .box:hover {
     transform: scale(1.1);
@@ -61,6 +74,31 @@ body {
     color: #fcdab7;
     text-align: justify;
 }
+.iletisim-span {
+    color: #d7b545;
+    font-size: 18px;
+    font-weight: 600;
+}
+.e-posta-link {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: text;
+}
+
+.dillerim {
+    margin-left: 0px;
+    list-style-type: none;
+    padding-left: 0px;
+    gap: 10px;
+}
+.dil-li {
+    text-align: start;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
 .projeler {
     display: flex;
     flex-direction: column;
